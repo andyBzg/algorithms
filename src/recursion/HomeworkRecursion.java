@@ -41,6 +41,24 @@ public class HomeworkRecursion {
         }
     }
 
+
+    public static boolean palindrome(String str) {
+
+        str = str.toLowerCase();
+
+        if (str.charAt(0) != str.charAt(str.length() - 1)) {
+            return false;
+        }
+        else if (str.length() == 1) {
+            return true;
+        }
+        else {
+            return palindrome(str.substring(1, str.length() - 1));
+        }
+
+
+    }
+
 }
 
 
@@ -62,7 +80,10 @@ class HomeworkRecursionMain {
 
         long fib = fibRecursion(20);
         System.out.println(fib);
-        
+
+
+        String str = "Tenet";
+        System.out.println(palindrome(str));
 
     }
 
