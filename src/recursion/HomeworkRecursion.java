@@ -1,7 +1,6 @@
 package recursion;
 
-import static recursion.HomeworkRecursion.powerOfTwo;
-import static recursion.HomeworkRecursion.sumOfDigits;
+import static recursion.HomeworkRecursion.*;
 
 public class HomeworkRecursion {
 
@@ -28,6 +27,20 @@ public class HomeworkRecursion {
         }
     }
 
+
+    public static long fibRecursion(long n) {
+
+        if (n == 1) {
+            return 1;
+        }
+        else if (n == 2) {
+            return 1;
+        }
+        else {
+            return fibRecursion(n - 1) + fibRecursion(n - 2);
+        }
+    }
+
 }
 
 
@@ -45,6 +58,11 @@ class HomeworkRecursionMain {
 
         int sum = sumOfDigits((int) n);
         System.out.println(sum);
+
+
+        long fib = fibRecursion(20);
+        System.out.println(fib);
+        
 
     }
 
