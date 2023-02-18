@@ -4,15 +4,15 @@ import static recursion.HomeworkRecursion.*;
 
 public class HomeworkRecursion {
 
-    public static int powerOfTwo(double n) {
+    public static String isPowerOfTwo(double n) {
         if (n == 1) {
-            return 1;
+            return "YES";
         }
         else if (n < 1) {
-            return 0;
+            return "NO";
         }
         else {
-            return powerOfTwo(n / 2);
+            return isPowerOfTwo(n / 2);
         }
     }
 
@@ -55,8 +55,6 @@ public class HomeworkRecursion {
         else {
             return palindrome(str.substring(1, str.length() - 1));
         }
-
-
     }
 
 }
@@ -66,15 +64,12 @@ class HomeworkRecursionMain {
     public static void main(String[] args) {
 
         double n = 8192;
-
-        if (powerOfTwo(n) == 1) {
-            System.out.println("YES");
-        } else {
-            System.out.println("NO");
-        }
+        String answer = isPowerOfTwo(n);
+        System.out.println(answer);
 
 
-        int sum = sumOfDigits((int) n);
+        int num = 8192;
+        int sum = sumOfDigits(num);
         System.out.println(sum);
 
 
