@@ -4,6 +4,12 @@ import java.util.Arrays;
 
 import static devide.and.conquer.HomeworkDivideAndConquer.sortChars;
 
+
+/*Расставьте в алфавитном порядке буквы.
+Разрешается использование техники Разделяй и властвуй.
+Полученные данные напечатайте.*/
+
+
 public class HomeworkDivideAndConquer {
     public static String sortChars(String string) {
 
@@ -11,12 +17,12 @@ public class HomeworkDivideAndConquer {
         char[] chars = string.toCharArray();
         Arrays.sort(chars);
 
-        string = "";
+        StringBuilder result = new StringBuilder();
         for (char c : chars) {
-            string += c;
+            result.append(c);
         }
 
-        return string;
+        return result.toString();
     }
 
 }
